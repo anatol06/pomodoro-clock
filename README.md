@@ -1,2 +1,3 @@
-# pomodoro-clock
-A simple JS pomodoro Clock
+# Pomodoro Clock
+## A simple JS pomodoro Clock
+### [Demo](https://anatol06.github.io/pomodoro-clock/)
