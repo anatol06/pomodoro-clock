@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800')
+@import '../fonts/fonts.css'
+
+$green:  #3DA949
+$red: 	 #D3314A
+$yellow: #F8C127
+$blue: 	 #3570D5
+$body-col: 			  #232323
+$light-text: 		  #E2E2E2
+$tab-col: 			  #4A4A4A
+$activ-tab-col:   #686868
+/* Dynamic colors */
+$btn-success-col: darken($green, 25%)
+$btn-danger-col:  darken($red, 25%)
+$btn-warning-col: darken($yellow, 29%)
+$btn-primary-col: darken($blue, 14%)
+$digits-col: 			darken($light-text, 13%)
+$clock-bg: 				lighten($body-col, 3%)
+/* Shadows */
+$btn-success-b-sh: inset 0px 0px 11px 1px rgba(lighten($btn-success-col, 6%),.7), 2px 2px 1px 1px rgba(0,0,0,0.2)
+$btn-danger-b-sh:  inset 0px 0px 11px 1px rgba(lighten($btn-danger-col,  8%),.7), 2px 2px 1px 1px rgba(0,0,0,0.2)
+$btn-warning-b-sh: inset 0px 0px 11px 1px rgba(lighten($btn-warning-col, 9%),.7), 2px 2px 1px 1px rgba(0,0,0,0.2)
+$btn-primary-b-sh: inset 0px 0px 11px 1px rgba(lighten($btn-primary-col, 8%),.7), 2px 2px 1px 1px rgba(0,0,0,0.2)
+
+$btn-success-active-b-sh: inset 0px 0px 11px 1px rgba(lighten($btn-success-col, 6%),.7)
+$btn-danger-active-b-sh:	inset 0px 0px 11px 1px rgba(lighten($btn-danger-col,  8%),.7)
+$btn-warning-active-b-sh:	inset 0px 0px 11px 1px rgba(lighten($btn-warning-col, 9%),.7)
+$btn-primary-active-b-sh:	inset 0px 0px 11px 1px rgba(lighten($btn-primary-col, 8%),.7)
+
+$box-shadow: 			 		0px 0px 1px 3px rgba(0,0,0,0.1)
+$text-shadow: 		 		1px 1px 1px rgba(0,0,0,0.5)
+$text-shadow-digits: 	3px 3px 3px rgba(0,0,0,0.4)
+
+body 
+	background-color: $body-col
+	font-family: "Open Sans"
+	color: $light-text
+
+h1 
+	font-size: 2.4em
+	margin: .5em 0 -.6em 0
+	color: darken($light-text, 16%)
+	font-family: 'Open Sans'
+	font-weight: 300
+	letter-spacing: .2em
+	text-align: center
+	text-shadow: $text-shadow
+
+.btn-success
+	color: darken($light-text, 5%)
+	background-color: $btn-success-col
+	border-color: lighten($btn-success-col, 1%)
+	box-shadow: $btn-success-b-sh
+	text-shadow: $text-shadow
+	&:hover
+		color: $light-text
+		background-color: lighten($btn-success-col, 3%)
+		border-color: lighten($btn-success-col, 4%)
+	&:active
+		transition: none
+		margin-bottom: 2px
+		margin-right: 7px
+		box-shadow: $btn-success-active-b-sh
+		border: none
+		background-color: $btn-success-col
+
+.btn-danger
+	color: darken($light-text, 5%)
+	background-color: $btn-danger-col
+	border-color: lighten($btn-danger-col, 1%)
+	box-shadow: $btn-danger-b-sh
+	text-shadow: $text-shadow
+	&:hover
+		color: $light-text
+		background-color: lighten($btn-danger-col, 3%)
+		border-color: darken($btn-danger-col, 4%)
+	&:active
+		transition: none
+		border: none
+		margin-right: 7px
+		box-shadow: $btn-danger-active-b-sh
+		background-color: $btn-danger-col		
+
+.btn-warning
+	color: darken($light-text, 5%)
+	background-color: $btn-warning-col
+	border-color: lighten($btn-warning-col, 1%)
+	box-shadow: $btn-warning-b-sh
+	text-shadow: $text-shadow
+	&:hover
+		color: $light-text
+		background-color: lighten($btn-warning-col, 3%)
+		border-color: lighten($btn-warning-col, 4%)
+	&:active
+		transition: none
+		border: none
+		margin-left: 2px
+		box-shadow: $btn-warning-active-b-sh
+		background-color: $btn-warning-col
+
+.btn-primary
+	color: darken($light-text, 5%)
+	background-color: $btn-primary-col
+	border-color: lighten($btn-primary-col, 1%)
+	box-shadow: $btn-primary-b-sh
+	text-shadow: $text-shadow
+	cursor: pointer
+	&:hover
+		color: $light-text
+		background-color: lighten($btn-primary-col, 5%)
+		border-color: lighten($btn-primary-col, 6%)
+	&:active
+		box-shadow: $btn-primary-active-b-sh
+		border: none
+		background-color: $btn-primary-col
+		transition: none
+
+.nav-tabs .nav-item 
+	margin: 0 3px 3px 0
+	border: 0
+	box-shadow: $box-shadow
+	text-shadow: $text-shadow
+
+.nav-tabs 
+	border-bottom: 1px solid lighten($body-col, 30%)	
+
+.nav-link
+	color: darken($light-text, 10%)
+	background-color: $tab-col
+	font-weight: 300
+	letter-spacing: .04em
+	&:hover
+		color: lighten($light-text, 5%)
+		background-color: lighten($tab-col, 2%)
+
+.nav-link.active
+	color: lighten($light-text, 13%)!important
+	background-color: $activ-tab-col!important	
+	&:hover
+		color: lighten($light-text, 13%)
+		background-color: lighten($activ-tab-col, 2%)!important
+
+#nav-clock, #nav-settings
+	padding: 20px
+	margin: 3px 0px
+	background-color: $clock-bg
+	border-radius: 4px
+	border: 1px solid lighten($clock-bg, 3%)
+	box-shadow: $box-shadow
+
+#nav-settings
+	padding-bottom: 90px
+
+.clock-text
+	font-size: 1.6em
+	color: darken($light-text, 15%)
+	line-height: 1.2em
+	padding: 20px
+	font-weight: 300
+	text-shadow: $text-shadow
+
+.time
+	font-size: 16em
+	font-family: 'DS-Digital'
+	color: $digits-col
+	line-height: 1em
+	width: 100%
+	margin: 0 auto
+	padding: 20px
+	text-shadow: $text-shadow-digits
+
+.buttons
+	margin: 0
+	padding: 20px
+	button
+		margin-right: 5px
+		font-weight: 300
+		letter-spacing: .04em
+		cursor: pointer
+
+.set
+	margin-top: 50px
+	text-shadow: $text-shadow
+	font-weight: 300
+	button
+		min-width: 50px
+		font-family: 'DS-Digital'
+		font-size: 1.4em
+		margin-right: 5px
+	span
+		font-size: 1.3em
+		margin-right: 20px
+		color: darken($light-text, 20%)
+	span.dot
+		color: $body-col
+		margin: 0
+		padding: 0
+
+footer
+	text-align: center
+	color: lighten($body-col, 25%)
+	font-size: 12px
+	padding: 20px
+	text-shadow: $text-shadow
+
+/*========== MEDIA - Desktop First  ==========*/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+	.clock-text
+		font-size: 1.4em
+	.time
+		font-size: 14em
+	h1 
+		font-size: 1.6em
+		margin: .5em 0 -1em 0
+		letter-spacing: .15em
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+	.clock-text
+		font-size: 1.2em
+		line-height: 1em
+		padding: 15px
+	.time
+		font-size: 11em
+		line-height: .9em
+		padding: 10px
+	h1 
+		visibility: hidden
+		
+	.set
+		button
+			min-width: 45px
+			margin-right: 3px
+		span
+			font-size: 1.2em
+			margin-right: 5px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+	.clock-text
+		font-size: 1.1em
+	.time
+		font-size: 6.5em
+		padding: 10px
+
+	.btn
+		font-size: .8em
+	.set
+		button
+			margin-right: 3px
+			font-size: .9em
+		span
+			font-size: .9em
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px)
+	.clock-text
+		font-size: 1.2em
+	.time
+		font-size: 5em
+		line-height: .9em
+	#nav-clock, #nav-settings
+		padding: 15px
+
+	.btn
+		font-size: .9em
+	.set
+		margin: 20px 0 20px 0
+		button
+			min-width: 40px
+			margin-right: 2px
+			font-size: .7em
+		span
+			font-size: .6em
+		

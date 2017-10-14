@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pomodoro Clock</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link rel="stylesheet" href="css/main.css">
+<audio id="sound-st" src="http://www.freesfx.co.uk/rx2/mp3s/5/16970_1461335345.mp3"></audio>
+<audio id="sound-up" src="http://www.freesfx.co.uk/rx2/mp3s/5/16930_1461335337.mp3"></audio>
+<audio id="sound-break" src="http://soundbible.com/mp3/front-desk-bells-daniel_simon.mp3"></audio>
+</head>
+<body>
+
+	<div class="container-fluid">
+  <h1>Tomato Clock</h1>
+	<div class="row justify-content-center">
+		<div class="col-md-9">			
+			<nav class="nav nav-tabs" role="tablist">
+			  <a class="nav-item nav-link active" id="nav-clock-tab" data-toggle="tab" href="#nav-clock" role="tab" aria-controls="nav-clock" aria-expanded="true">Clock</a>
+			  <a class="nav-item nav-link" id="nav-settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-settings">Settings</a>
+			</nav>
+
+			<div class="tab-content">
+
+			  <div class="tab-pane fade show active" id="nav-clock" role="tabpanel" aria-labelledby="nav-clock-tab">		
+			  		<div id="clockText" class="text-center clock-text">START A WORK SESSION</div> 
+
+			  		<div id="breakValue" class="col text-center time"></div>		
+				  	<div id="clockValue" class="col text-center time">25:00</div>
+
+				  	<div class="col text-center buttons">						
+							<button id="start" type="button" class="btn btn-lg btn-success">Start</button>
+							<button id="resume" type="button" class="btn btn-lg btn-success">Resume</button>
+							<button id="stop" type="button" class="btn btn-lg btn-danger">Pause</button>
+							<button id="reset" type="button" class="btn btn-lg btn-warning">Reset</button>
+			  		</div>
+			  </div>
+
+				<div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">
+				<div class="text-center col-*">
+					<div class="set col-*">
+						<span>Set Work Time:<span class="dot">.</span></span>
+						<button id="workTimePlus" type="button" class="btn btn-primary">+</button>
+				  	<button id="workTime" type="button" class="btn btn-light">25</button>
+				  	<button id="workTimeMinus" type="button" class="btn btn-primary">-</button>
+				  </div>
+					<div class="set col-*">
+				  	<span>Set Break Time:</span>
+						<button id="breakTimePlus" type="button" class="btn btn-primary">+</button>
+				  	<button id="breakTime" type="button" class="btn btn-light">5</button>
+				  	<button id="breakTimeMinus" type="button" class="btn btn-primary">-</button>
+			  	</div>
+				</div>
+	</div>
+ </div>
+</div>
+	<footer class="col-sm-12">
+			By A. C. for the Free Code Camp Challenge "Build a <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Clock</a>"
+	</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
